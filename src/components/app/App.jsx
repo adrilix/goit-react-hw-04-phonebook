@@ -37,7 +37,7 @@ function App() {
     );
     findName
       ? alert(`Contact ${contact.name} is already in the contacts list`)
-      : setContacts([contact, ...contacts]);
+      : setContacts(prevContacts=>[contact, ...prevContacts]);
   };
 
   const changeFilter = event => setFilter(event.target.value);
